@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schimba Culoarea</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.5s;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="schimbaCuloarea()">Schimba Culoarea</button>
+
+    <script>
+        function schimbaCuloarea() {
+            const culori = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEEAD', '#D4A5A5'];
+            const culoareNoua = culori[Math.floor(Math.random() * culori.length)];
+            document.body.style.backgroundColor = culoareNoua;
+        }
+    </script>
+</body>
+</html>
